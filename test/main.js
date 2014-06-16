@@ -16,7 +16,9 @@ after(function(){
 describe('Customer', function() {
   it('should be able to construct with address', function(done){
     var user = pjs.customer({
-      address: '1234 Fake St'
+      address: '1234 Fake St',
+      city: 'Los Angeles',
+      state: 'CA'
     });
     should.exist(user.location);
     user.location.address.should.equal('1234 Fake St');
@@ -28,7 +30,9 @@ describe('Customer', function() {
   it('should be able to construct with apartment number', function(done){
     var user = pjs.customer({
       address: '1234 Fake St',
-      apt: 2315
+      apt: 2315,
+      city: 'Los Angeles',
+      state: 'CA'
     });
     should.exist(user.location);
     user.location.address.should.equal('1234 Fake St');
@@ -38,7 +42,9 @@ describe('Customer', function() {
   it('should be able to construct with suite number', function(done){
     var user = pjs.customer({
       address: '1234 Fake St',
-      suite: 2315
+      suite: 2315,
+      city: 'Los Angeles',
+      state: 'CA'
     });
     should.exist(user.location);
     user.location.address.should.equal('1234 Fake St');
@@ -48,7 +54,9 @@ describe('Customer', function() {
   it('should be able to construct with floor number', function(done){
     var user = pjs.customer({
       address: '1234 Fake St',
-      floor: 2
+      floor: 2,
+      city: 'Los Angeles',
+      state: 'CA'
     });
     should.exist(user.location);
     user.location.address.should.equal('1234 Fake St');

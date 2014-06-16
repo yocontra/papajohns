@@ -1,0 +1,40 @@
+{
+  "name": "papajohns",
+  "description": "Unofficial API client",
+  "version": "0.0.1",
+  "homepage": "http://github.com/wearefractal/papajohns",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wearefractal/papajohns.git"
+  },
+  "author": "Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+  "main": "./index.js",
+  "dependencies": {
+    "request": "^2.36.0",
+    "xml2json": "^0.4.0"
+  },
+  "devDependencies": {
+    "coveralls": "^2.6.1",
+    "istanbul": "^0.2.3",
+    "jshint": "^2.4.1",
+    "jshint-stylish": "^0.2.0",
+    "mocha": "^1.17.0",
+    "mocha-lcov-reporter": "^0.0.1",
+    "rimraf": "^2.2.5",
+    "should": "^4.0.0"
+  },
+  "scripts": {
+    "lint": "jshint . --reporter node_modules/jshint-stylish/stylish.js --exclude node_modules",
+    "test": "npm run-script lint && mocha --reporter spec",
+    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/wearefractal/papajohns/raw/master/LICENSE"
+    }
+  ]
+}

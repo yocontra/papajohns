@@ -4,15 +4,6 @@ var pjs = require('../');
 var should = require('should');
 require('mocha');
 
-before(function(){
-  this.originalBase = pjs.base;
-  pjs.base = 'some local server';
-});
-
-after(function(){
-  pjs.base = this.originalBase;
-});
-
 describe('Customer', function() {
   it('should be able to construct with address', function(done){
     var user = pjs.customer({
